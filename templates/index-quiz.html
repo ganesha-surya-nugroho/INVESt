@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Quiz</title>
+    <link rel="stylesheet" href="../static/assets/css/ppt.css">
+</head>
+<body>
+    <h1>Generate Your Quiz</h1>
+    <form action="/generate-quiz" method="POST">
+        <textarea class="topic" name="context" rows="5" cols="50" placeholder="Enter context here..." required></textarea><br><br>
+        <button type="submit"><img src="../static/assets/img/christmas-stars.png" alt="">Generate Quiz</button>
+    </form>
+</body>
+</html>

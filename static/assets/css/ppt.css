@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f8f8;  /* Background terang */
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1 {
+    color: #333;  /* Teks gelap untuk kontras yang baik */
+    text-align: center;
+    margin-top: 50px;
+    font-size: 74px;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+label {
+    color: #333;  /* Warna teks label lebih gelap */
+    margin-bottom: 10px;
+}
+
+.topic {
+    width: 1200px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    
+    background-color: #ffffff;  /* Background putih untuk input */
+    color: #0362F3;  /* Teks biru */
+    border: 2px solid #0362F3;  /* Border biru */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.topic:focus {
+    background-color: #e6f0ff;  /* Latar belakang lebih terang saat fokus */
+    box-shadow: 0 0 20px rgba(3, 98, 243, 0.6),
+                0 0 30px rgba(3, 98, 243, 0.4),
+                0 0 40px rgba(3, 98, 243, 0.2);
+    outline: none;
+}
+
+form button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 20px;
+    background-color: #0362F3;  /* Tombol dengan warna biru */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(3, 98, 243, 0.6);
+}
+
+form button:hover {
+    background-color: #0254c4;  /* Warna tombol saat hover */
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #555;  /* Warna teks paragraf lebih gelap untuk kontras */
+}
+
+form button img {
+    width: 45px;
+    height: 45px;
+}

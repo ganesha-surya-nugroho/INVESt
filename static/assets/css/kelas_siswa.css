@@ -1,0 +1,181 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F4F7FC;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+nav {
+    width: 280px;
+    background-color: #fff;
+    padding: 30px 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #0078FF;
+    border-bottom: 2px solid #F0F0F0;
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #0078FF;
+    color: #fff;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 30px;
+}
+
+main h1 {
+    font-size: 2rem;
+    color: #0078FF;
+    margin-bottom: 20px;
+}
+
+main h2 {
+    font-size: 1.5rem;
+    margin: 30px 0 15px;
+    color: #333;
+}
+
+.kelas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.kelas-container ul li {
+    list-style: none;
+}
+
+.kelas-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 450px;
+}
+
+.kelas-card img {
+    border-radius: 12px;
+}
+
+
+.kelas-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.kelas-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.kelas-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.kelas-card a {
+    text-decoration: none;
+    background-color: #0078FF;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.kelas-card a:hover {
+    background-color: #005BB5;
+}
+
+/* Notification Message */
+.message {
+    background-color: #E3FCEC;
+    border: 1px solid #A5D6A7;
+    padding: 15px;
+    border-radius: 8px;
+    color: #2E7D32;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        width: 200px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    main h1 {
+        font-size: 1.8rem;
+    }
+
+    .kelas-card {
+        padding: 15px;
+    }
+
+    .kelas-card h3 {
+        font-size: 1rem;
+    }
+}

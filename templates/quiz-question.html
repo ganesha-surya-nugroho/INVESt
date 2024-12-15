@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question {{ question_number }}</title>
+    <link rel="stylesheet" href="../static/assets/css/quiz.css">
+    <style>
+        /* Popup styling */
+        
+    </style>
+</head>
+<body>
+    <h1>Pertanyaan {{ question_number }} dari {{ total }}</h1>
+    <div class="quest">
+        <p>{{ question.question }}</p>
+    </div>
+    <form id="quiz-form" method="POST" onsubmit="return handleSubmit(event)">
+        {% for option in question.options %}
+            <label class="quiz-option">
+                <input type="radio" name="user_answer" value="{{ option }}" required>
+                <span>{{ option }}</span>
+            </label><br>
+        {% endfor %}
+        <button type="submit">Next</button>
+    </form>
+
+    <!-- Popup and overlay -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <h2>Hasil Quiz Anda</h2>
+        <p id="result-text"></p>
+        <button onclick="closePopup()">Tutup</button>
+    </div>
+
+    <script>
+        let score = 0; // Simpan skor
+        const totalQuestions = {{ total }}; // Total jumlah pertanyaan
+
+        function handleSubmit(event) {
+            event.preventDefault(); // Mencegah form melakukan reload halaman
+
+            // Simulasikan penilaian (Anda bisa mengganti logika ini sesuai backend)
+            const userAnswer = document.querySelector('input[name="user_answer"]:checked').value;
+            const correctAnswer = "{{ question.correct_answer }}"; // Jawaban benar dari backend
+            if (userAnswer === correctAnswer) {
+                score++;
+            }
+
+            // Jika ini adalah pertanyaan terakhir, tampilkan hasil
+            if ({{ question_number }} === totalQuestions) {
+                showResult(score, totalQuestions);
+            } else {
+                // Redirect ke pertanyaan berikutnya
+                document.getElementById('quiz-form').submit();
+            }
+        }
+
+        // Function to show the popup with results
+        function showResult(score, total) {
+            // Set the result text
+            document.getElementById('result-text').textContent = `Skor Anda: ${score} dari ${total} pertanyaan.`;
+
+            // Show the overlay and popup
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

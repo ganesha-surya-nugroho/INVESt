@@ -1,0 +1,276 @@
+* {
+    padding : 0;
+    margin : 0;
+}
+
+body {
+    background-color: #00142F;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    font-family: "DM Sans", sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #00142F;
+        border-right: 2px solid #fff;
+    width: 100px;
+    height: 100vh;
+    align-items: center;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px; 
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+nav a:hover {
+    background-color: #0362F3;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+nav a img{
+    width: 50px;
+    height: 50px;
+}
+
+main {
+    width: 920px;
+    height: 90vh;
+    margin-top: 26px;
+    margin-left: 50px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.p-header, .h1-header {
+    font-size: 1.6rem;
+}
+
+.main-header-content {
+    display: flex;
+    align-items: center;
+}
+
+.main-header-content input {
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    padding-left: 10px;
+    margin-right: 10px;
+    background-color: #00142F;
+    color: #fff;
+}
+
+.main-header-content button {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #0362F3;
+    color: #fff;
+}
+
+.main-header-content button:hover {
+    background-color: #fff;
+    color: #0362F3;
+}
+
+.main-header-content button img {
+    width: 20px;
+    height: 20px;
+}
+
+.col-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.disc {
+    background-image: url("../img/bg-disc.png");
+    background-size: cover;
+    width: 464px;
+    height: 250px;
+    border-radius: 40px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.disc-col1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    padding-left: 35px;
+    margin-right: 35px;
+}
+
+.disc-col1 h2 {
+    font-size: 1.7rem;
+}
+
+.disc-col1 h2:nth-child(2) {
+    font-size: 2.7rem;
+}
+
+.disc-col1 p {
+    font-size: 1.2rem;
+    color: #d9d9d9;
+}
+
+.disc-col1 button {
+    width: 135px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.act {
+    width: 400px;
+    height: 250px;
+    border-radius: 40px;
+    background-color: #1B2A3F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.col-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.feature {
+    width: 292px;
+    height: 124px;
+    background-color: #1B2A3F;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: width .8s;
+}
+
+.feature:hover {
+    width: 310px;
+    height: 140px;
+}
+
+.logo {
+    border-bottom: 1px solid #fff;
+    width: 115px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+aside {
+    margin-left: 100px;
+    height: 100vh;
+    background-color: #131E2D;
+    border-radius: 20px;
+}
+
+.bg-aside {
+    background-color: #0362F3;
+    width: 366px;
+    height: 127px;
+    border-radius: 20px;
+    margin-top: 26px;
+}
+
+.bg-aside img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    position: relative;
+    top: 70px;
+}
+
+.nama {
+    margin-top: 60px;
+    font-size: 1.2rem;
+}
+
+.location {
+    display: flex;
+    margin: auto;
+}
+
+.stats {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.stats-content {
+    width: 100px;
+    height: 85px;
+    background-color: #33435B;
+    border-radius: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+.stats-content h2 {
+    padding-top: 20px;
+    color: #fff;
+    font-size: 2rem;
+}   
+
+.daystreak {
+    display: flex;
+    flex-direction: column;
+    width: 321px;
+    height: 342px;
+    background-image: url("../img/bg-daystreak.png");
+    margin: auto;
+}
+
+.daystreak h2 {
+    font-size: 3.5rem;
+    color: #fff;    
+    text-align: center;
+    margin-top: 100px;
+}
+
+.active {
+    background-color: #0362F3;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}

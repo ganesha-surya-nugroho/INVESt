@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Flashcard Generator</title>
+    <link rel="stylesheet" href="../static/assets/css/flashcard.css">
+  
+</head>
+<body>
+    <div class="container">
+        <h1>AI Flashcard Generator</h1>
+        <form id="flashcardForm">
+            <input class="topic" type="text" id="topicInput" placeholder="Enter topic..." required>
+            <button type="submit">Generate Flashcards</button>
+        </form>
+        <div id="flashcards"></div>
+    </div>
+    <script>
+        document.getElementById('flashcardForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const topic = document.getElementById('topicInput').value;
+            const response = await fetch('/generate-flashcard', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ topic }),
+            });
+            const data = await response.json();
+            const flashcardsDiv = document.getElementById('flashcards');
+            flashcardsDiv.innerHTML = '';
+            if (data.flashcards) {
+                data.flashcards.forEach(card => {
+                    const cardDiv = document.createElement('div');
+                    cardDiv.classList.add('flashcard');
+                    cardDiv.innerHTML = `
+                        <div class="front">${card.front || 'Front side is missing'}</div>
+                        <div class="back">${card.back || 'Back side is missing'}</div>
+                    `;
+                    flashcardsDiv.appendChild(cardDiv);
+                });
+            } else {
+                flashcardsDiv.innerHTML = '<p>No flashcards generated.</p>';
+            }
+        });
+    </script>
+</body>
+</html>

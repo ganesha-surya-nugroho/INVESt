@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer</title>
+    <link rel="stylesheet" href="../static/assets/css/summ.css">
+</head>
+<body>
+    <header>
+        <h1>Text Summarizer</h1>
+    </header>
+    <main>
+        <div class="container">
+            <!-- Kolom Input -->
+            <div class="column">
+                <form method="POST" action="/">
+                    <label for="inputText">Enter Text to Summarize:</label>
+                    <textarea id="inputText" name="input_text" rows="15" placeholder="Enter your text here..."></textarea>
+                    <button type="submit">Summarize</button>
+                </form>
+            </div>
+            <!-- Kolom Output -->
+            <div class="column">
+                <label for="summaryOutput">Summary:</label>
+                <textarea id="summaryOutput" rows="15" readonly>{{ summary }}</textarea>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

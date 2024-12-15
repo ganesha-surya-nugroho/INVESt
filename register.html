@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="static/assets/css/login.css">
+</head>
+<body>
+    <form action="register.php" method="POST">
+        <input type="text" name="nama" placeholder="Nama Lengkap" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <select name="role" required>
+            <option value="guru">Guru</option>
+            <option value="siswa">Siswa</option>
+        </select>
+        <button type="submit">Sign Up</button>
+        <a href="login.html">Sudah punya akun?</a>
+    </form>
+</body>
+</html>
